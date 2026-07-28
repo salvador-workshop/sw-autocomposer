@@ -1,0 +1,21 @@
+{
+    "version": "0.1.1",
+    "eightBarForms": [
+        "Sentence",
+        "Period",
+        "Hybrid 1",
+        "Hybrid 2",
+        "Hybrid 3",
+        "Hybrid 4"
+    ],
+    "smallForms": [
+        "Small Binary",
+        "Small Ternary"
+    ],
+    "sixteenBarForms": [
+        "Sixteen-bar Sentence",
+        "Sixteen-bar Period (Hybrid 1)",
+        "Sixteen-bar Period (Sentence)",
+        "Sixteen-bar Period (Hybrid 3)"
+    ]
+}

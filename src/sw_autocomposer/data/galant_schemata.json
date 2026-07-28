@@ -1,0 +1,28 @@
+{
+    "version": "0.1.1",
+    "openingSchemata": [
+        "Meyer",
+        "Jupiter",
+        "Jupiter (alt)",
+        "Aprile",
+        "Pastorella",
+        "Do-Re-Mi",
+        "Sol-Fa-Mi",
+        "Sol-Fa-Mi (alt)",
+        "Romanesca"
+    ],
+    "continuingSchemata": [
+        "Prinner",
+        "Prinner (alt)",
+        "Modulating Prinner",
+        "Modulating Prinner (alt)",
+        "Passo Indietro",
+        "Mod. Passo Indietro"
+    ],
+    "contrastingSchemata": [
+        "Quiescenza",
+        "Ponte",
+        "Fenaroli",
+        "Indugio"
+    ]
+}
