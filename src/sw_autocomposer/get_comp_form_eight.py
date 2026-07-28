@@ -6,26 +6,26 @@ cfg_data = get_cfg_data()
 script_desc = "..."
 
 
-def get_contrasting_schema():
+def get_comp_form_eight():
 
     parser = argparse.ArgumentParser(description=script_desc)
     args = parser.parse_args()
 
-    schemata_data_filepath = os.path.join(cfg_data["data_dir"], "galant_schemata.json")
+    schemata_data_filepath = os.path.join(cfg_data["data_dir"], "composition_form.json")
     
     with open(schemata_data_filepath) as f:
-        schemata_data = json.load(f)
+        comp_form_data = json.load(f)
 
-    random_contrasting_schema = random.choice(schemata_data["contrastingSchemata"])
+    random_composition_form = random.choice(comp_form_data["eightBarForms"])
 
     print("\n----------------------------------------------------------------\n")
 
-    print(f"> Get Contrasting Schema")
+    print(f"> Get Eight-bar Composition Form")
     print(f">")
-    print(f"> {random_contrasting_schema}")
+    print(f"> {random_composition_form}")
 
     print("\n----------------------------------------------------------------\n")
 
 
-if __name__ == "__get_contrasting_schema__":
-    get_contrasting_schema()
+if __name__ == "__get_comp_form_eight__":
+    get_comp_form_eight()
