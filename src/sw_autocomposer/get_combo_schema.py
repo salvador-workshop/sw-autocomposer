@@ -11,7 +11,7 @@ def get_combo_schema():
     parser = argparse.ArgumentParser(description=script_desc)
     args = parser.parse_args()
 
-    schemata_data_filepath = os.path.join(cfg_data["data_dir"], "galant_schemata.json")
+    schemata_data_filepath = os.path.join(cfg_data["data_dir"], cfg_data["galant_schemata_filename"])
 
     with open(schemata_data_filepath) as f:
         schemata_data = json.load(f)

@@ -12,6 +12,8 @@ def get_cfg_data():
         "output_dir": output_dir,
         "src_dir": src_dir,
         "cfg_filename": "autocomposer.config.json",
+        "comp_form_filename": "composition_form.json",
+        "galant_schemata_filename": "galant_schemata.json",
     }
 
     cfg_data["cfg_filepath"] = os.path.join(repo_root_dir, cfg_data["cfg_filename"])

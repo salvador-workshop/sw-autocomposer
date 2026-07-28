@@ -11,7 +11,7 @@ def get_comp_form_small():
     parser = argparse.ArgumentParser(description=script_desc)
     args = parser.parse_args()
 
-    schemata_data_filepath = os.path.join(cfg_data["data_dir"], "composition_form.json")
+    schemata_data_filepath = os.path.join(cfg_data["data_dir"], cfg_data["comp_form_filename"])
     
     with open(schemata_data_filepath) as f:
         comp_form_data = json.load(f)
