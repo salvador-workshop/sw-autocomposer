@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodyIndugio = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerIndugio = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperIndugio = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperIndugio = {
 }
 
 basslineIndugio = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassIndugio = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperIndugio 
+      \clef treble
+      \key c \major
+
+      \upperIndugio
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslineIndugio 
+      \clef bass
+      \key c \major
+
+      \basslineIndugio
     }
     \new FiguredBass {
-      \figuredBassIndugio 
+      \figuredBassIndugio
     }
   >>
   \layout {

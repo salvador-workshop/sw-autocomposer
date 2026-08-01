@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodyRomanesca = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerRomanesca = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperRomanesca = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperRomanesca = {
 }
 
 basslineRomanesca = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassRomanesca = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperRomanesca 
+      \clef treble
+      \key c \major
+
+      \upperRomanesca
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslineRomanesca 
+      \clef bass
+      \key c \major
+
+      \basslineRomanesca
     }
     \new FiguredBass {
-      \figuredBassRomanesca 
+      \figuredBassRomanesca
     }
   >>
   \layout {

@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodyPonte = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerPonte = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperPonte = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperPonte = {
 }
 
 basslinePonte = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassPonte = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperPonte 
+      \clef treble
+      \key c \major
+
+      \upperPonte
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslinePonte 
+      \clef bass
+      \key c \major
+
+      \basslinePonte
     }
     \new FiguredBass {
-      \figuredBassPonte 
+      \figuredBassPonte
     }
   >>
   \layout {

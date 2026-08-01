@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodyJupiterAlt = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerJupiterAlt = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperJupiterAlt = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperJupiterAlt = {
 }
 
 basslineJupiterAlt = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassJupiterAlt = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperJupiterAlt 
+      \clef treble
+      \key c \major
+
+      \upperJupiterAlt
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslineJupiterAlt 
+      \clef bass
+      \key c \major
+
+      \basslineJupiterAlt
     }
     \new FiguredBass {
-      \figuredBassJupiterAlt 
+      \figuredBassJupiterAlt
     }
   >>
   \layout {

@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodyAprile = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerAprile = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperAprile = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperAprile = {
 }
 
 basslineAprile = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassAprile = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperAprile 
+      \clef treble
+      \key c \major
+
+      \upperAprile
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslineAprile 
+      \clef bass
+      \key c \major
+
+      \basslineAprile
     }
     \new FiguredBass {
-      \figuredBassAprile 
+      \figuredBassAprile
     }
   >>
   \layout {

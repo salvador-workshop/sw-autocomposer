@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodySolFaMi = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerSolFaMi = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperSolFaMi = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperSolFaMi = {
 }
 
 basslineSolFaMi = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassSolFaMi = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperSolFaMi 
+      \clef treble
+      \key c \major
+
+      \upperSolFaMi
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslineSolFaMi 
+      \clef bass
+      \key c \major
+
+      \basslineSolFaMi
     }
     \new FiguredBass {
-      \figuredBassSolFaMi 
+      \figuredBassSolFaMi
     }
   >>
   \layout {

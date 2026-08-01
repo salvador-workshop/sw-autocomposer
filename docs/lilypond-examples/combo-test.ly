@@ -1,20 +1,22 @@
 \version "2.25.13"
 
+% ----------------------------------------
+
 melodyMeyer = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerMeyer = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperMeyer = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -24,11 +26,9 @@ upperMeyer = {
 }
 
 basslineMeyer = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -39,20 +39,20 @@ figuredBassMeyer = \figuremode {
 % ----------------------------------------
 
 melodyPrinner = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerPrinner = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperPrinner = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -62,11 +62,9 @@ upperPrinner = {
 }
 
 basslinePrinner = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -77,20 +75,26 @@ figuredBassPrinner = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperMeyer 
+      \clef treble
+      \key c \major
+
+      \upperMeyer
       \upperPrinner
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslineMeyer 
+      \clef bass
+      \key c \major
+
+      \basslineMeyer
       \basslinePrinner
     }
     \new FiguredBass {
-      \figuredBassMeyer 
+      \figuredBassMeyer
       \figuredBassPrinner
     }
   >>

@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodyPastorella = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerPastorella = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperPastorella = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperPastorella = {
 }
 
 basslinePastorella = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassPastorella = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperPastorella 
+      \clef treble
+      \key c \major
+
+      \upperPastorella
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslinePastorella 
+      \clef bass
+      \key c \major
+
+      \basslinePastorella
     }
     \new FiguredBass {
-      \figuredBassPastorella 
+      \figuredBassPastorella
     }
   >>
   \layout {

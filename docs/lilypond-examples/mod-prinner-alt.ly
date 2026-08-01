@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodyPrinnerAlt = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerPrinnerAlt = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperPrinnerAlt = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperPrinnerAlt = {
 }
 
 basslinePrinnerAlt = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassPrinnerAlt = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperPrinnerAlt 
+      \clef treble
+      \key c \major
+
+      \upperPrinnerAlt
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslinePrinnerAlt 
+      \clef bass
+      \key c \major
+
+      \basslinePrinnerAlt
     }
     \new FiguredBass {
-      \figuredBassPrinnerAlt 
+      \figuredBassPrinnerAlt
     }
   >>
   \layout {

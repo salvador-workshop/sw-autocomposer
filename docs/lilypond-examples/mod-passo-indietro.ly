@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodyModPassoIndietro = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerModPassoIndietro = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperModPassoIndietro = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperModPassoIndietro = {
 }
 
 basslineModPassoIndietro = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassModPassoIndietro = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperModPassoIndietro 
+      \clef treble
+      \key c \major
+
+      \upperModPassoIndietro
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslineModPassoIndietro 
+      \clef bass
+      \key c \major
+
+      \basslineModPassoIndietro
     }
     \new FiguredBass {
-      \figuredBassModPassoIndietro 
+      \figuredBassModPassoIndietro
     }
   >>
   \layout {

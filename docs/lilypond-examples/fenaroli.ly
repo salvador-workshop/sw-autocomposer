@@ -3,20 +3,20 @@
 % ----------------------------------------
 
 melodyFenaroli = \relative c'' {
-  \override Stem.stencil = ##f
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
 innerFenaroli = \relative c' {
-  \override Stem.stencil = ##f
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
 upperFenaroli = {
-  \clef treble
-  \key c \major
   \time 4/4
 
   <<
@@ -26,11 +26,9 @@ upperFenaroli = {
 }
 
 basslineFenaroli = \relative c {
-  \clef bass
-  \key c \major
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
@@ -41,18 +39,24 @@ figuredBassFenaroli = \figuremode {
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperFenaroli 
+      \clef treble
+      \key c \major
+
+      \upperFenaroli
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslineFenaroli 
+      \clef bass
+      \key c \major
+
+      \basslineFenaroli
     }
     \new FiguredBass {
-      \figuredBassFenaroli 
+      \figuredBassFenaroli
     }
   >>
   \layout {

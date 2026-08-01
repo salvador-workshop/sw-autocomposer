@@ -2,57 +2,61 @@
 
 % ----------------------------------------
 
-melodyModPrinner = \relative c'' {
-  \override Stem.stencil = ##f
+melodyPrinner = \relative c'' {
   \voiceOne
+  \override Stem.stencil = ##f
+
   c4 b f' e
 }
 
-innerModPrinner = \relative c' {
-  \override Stem.stencil = ##f
+innerPrinner = \relative c' {
   \voiceTwo
+  \override Stem.stencil = ##f
+
   <e g>4 <f g> <f g> <e g>
 }
 
-upperModPrinner = {
-  \clef treble
-  \key c \major
+upperPrinner = {
   \time 4/4
 
   <<
-    \new Voice = "melodyModPrinner" \melodyModPrinner
-    \new Voice = "innerModPrinner" \innerModPrinner
+    \new Voice = "melodyPrinner" \melodyPrinner
+    \new Voice = "innerPrinner" \innerPrinner
   >>
 }
 
-basslineModPrinner = \relative c {
-  \clef bass
-  \key c \major
+basslinePrinner = \relative c {
   \time 4/4
-
   \override Stem.stencil = ##f
+
   c4 d b c
 }
 
-figuredBassModPrinner = \figuremode {
+figuredBassPrinner = \figuremode {
   <5 3>4 <4 3> <6 5> <5 3>
 }
 
 % ----------------------------------------
 
 \score {
-  \new PianoStaff 
+  \new PianoStaff
   <<
     \new Staff = "upper" {
       \omit Staff.TimeSignature
-      \upperModPrinner 
+      \clef treble
+      \key c \major
+
+      \upperPrinner
     }
     \new Staff = "bassline" {
       \omit Staff.TimeSignature
-      \basslineModPrinner 
+      \clef bass
+      \key c \major
+
+      \basslinePrinner
     }
     \new FiguredBass {
-      \figuredBassModPrinner 
+      \figuredBassPrinner
     }
   >>
   \layout {
