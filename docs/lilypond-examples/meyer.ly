@@ -1,5 +1,7 @@
 \version "2.25.13"
 
+% ----------------------------------------
+
 melodyMeyer = \relative c'' {
   \override Stem.stencil = ##f
   \voiceOne
@@ -35,6 +37,8 @@ basslineMeyer = \relative c {
 figuredBassMeyer = \figuremode {
   <5 3>4 <4 3> <6 5> <5 3>
 }
+
+% ----------------------------------------
 
 \score {
   \new PianoStaff 

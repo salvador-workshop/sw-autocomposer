@@ -1,29 +1,31 @@
 \version "2.25.13"
 
-melody = \relative c'' {
+% ----------------------------------------
+
+melodyJupiterAlt = \relative c'' {
   \override Stem.stencil = ##f
   \voiceOne
   c4 b f' e
 }
 
-inner = \relative c' {
+innerJupiterAlt = \relative c' {
   \override Stem.stencil = ##f
   \voiceTwo
   <e g>4 <f g> <f g> <e g>
 }
 
-upper = {
+upperJupiterAlt = {
   \clef treble
   \key c \major
   \time 4/4
 
   <<
-    \new Voice = "first" \melody
-    \new Voice = "second" \inner
+    \new Voice = "melodyJupiterAlt" \melodyJupiterAlt
+    \new Voice = "innerJupiterAlt" \innerJupiterAlt
   >>
 }
 
-bassline = \relative c {
+basslineJupiterAlt = \relative c {
   \clef bass
   \key c \major
   \time 4/4
@@ -32,17 +34,30 @@ bassline = \relative c {
   c4 d b c
 }
 
+figuredBassJupiterAlt = \figuremode {
+  <5 3>4 <4 3> <6 5> <5 3>
+}
+
+% ----------------------------------------
+
 \score {
   \new PianoStaff 
   <<
-    \new Staff = "upper" \upper
-    \new Staff = "bassline" \bassline
-    \new FiguredBass {
-    \figuremode {
-      <5 3>4 <4 3> <6 5> <5 3>
+    \new Staff = "upper" {
+      \omit Staff.TimeSignature
+      \upperJupiterAlt 
     }
-  }
+    \new Staff = "bassline" {
+      \omit Staff.TimeSignature
+      \basslineJupiterAlt 
+    }
+    \new FiguredBass {
+      \figuredBassJupiterAlt 
+    }
   >>
-  \layout { }
+  \layout {
+    ragged-right = ##f
+    ragged-last = ##f
+  }
   \midi { }
 }
