@@ -1,28 +1,104 @@
 {
-    "version": "0.1.1",
+    "version": "0.1.2",
     "openingSchemata": [
-        "Meyer",
-        "Jupiter",
-        "Jupiter (alt)",
-        "Aprile",
-        "Pastorella",
-        "Do-Re-Mi",
-        "Sol-Fa-Mi",
-        "Sol-Fa-Mi (alt)",
-        "Romanesca"
+        {
+            "id": "meyer",
+            "name": "Meyer",
+            "description": ""
+        },
+        {
+            "id": "jupiter",
+            "name": "Jupiter",
+            "description": ""
+        },
+        {
+            "id": "jupiter-alt",
+            "name": "Jupiter (alt)",
+            "description": ""
+        },
+        {
+            "id": "aprile",
+            "name": "Aprile",
+            "description": ""
+        },
+        {
+            "id": "pastorella",
+            "name": "Pastorella",
+            "description": ""
+        },
+        {
+            "id": "do-re-mi",
+            "name": "Do-Re-Mi",
+            "description": ""
+        },
+        {
+            "id": "sol-fa-mi",
+            "name": "Sol-Fa-Mi",
+            "description": ""
+        },
+        {
+            "id": "sol-fa-mi-alt",
+            "name": "Sol-Fa-Mi (alt)",
+            "description": ""
+        },
+        {
+            "id": "romanesca",
+            "name": "Romanesca",
+            "description": ""
+        }
     ],
     "continuingSchemata": [
-        "Prinner",
-        "Prinner (alt)",
-        "Modulating Prinner",
-        "Modulating Prinner (alt)",
-        "Passo Indietro",
-        "Mod. Passo Indietro"
+        {
+            "id": "prinner",
+            "name": "Prinner",
+            "description": ""
+        },
+        {
+            "id": "prinner-alt",
+            "name": "Prinner (alt)",
+            "description": ""
+        },
+        {
+            "id": "modulating-prinner",
+            "name": "Modulating Prinner",
+            "description": ""
+        },
+        {
+            "id": "modulating-prinner-alt",
+            "name": "Modulating Prinner (alt)",
+            "description": ""
+        },
+        {
+            "id": "passo-indietro",
+            "name": "Passo Indietro",
+            "description": ""
+        },
+        {
+            "id": "mod-passo-indietro",
+            "name": "Mod. Passo Indietro",
+            "description": ""
+        }
     ],
     "contrastingSchemata": [
-        "Quiescenza",
-        "Ponte",
-        "Fenaroli",
-        "Indugio"
+        {
+            "id": "quiescenza",
+            "name": "Quiescenza",
+            "description": ""
+        },
+        {
+            "id": "ponte",
+            "name": "Ponte",
+            "description": ""
+        },
+        {
+            "id": "fenaroli",
+            "name": "Fenaroli",
+            "description": ""
+        },
+        {
+            "id": "indugio",
+            "name": "Indugio",
+            "description": ""
+        }
     ]
 }

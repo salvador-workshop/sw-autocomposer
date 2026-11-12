@@ -1,21 +1,69 @@
 {
-    "version": "0.1.1",
+    "version": "0.1.2",
     "eightBarForms": [
-        "Sentence",
-        "Period",
-        "Hybrid 1",
-        "Hybrid 2",
-        "Hybrid 3",
-        "Hybrid 4"
+        {
+            "id": "sentence",
+            "name": "Sentence",
+            "description": ""
+        },
+        {
+            "id": "period",
+            "name": "Period",
+            "description": ""
+        },
+        {
+            "id": "hybrid-1",
+            "name": "Hybrid 1",
+            "description": ""
+        },
+        {
+            "id": "hybrid-2",
+            "name": "Hybrid 2",
+            "description": ""
+        },
+        {
+            "id": "hybrid-3",
+            "name": "Hybrid 3",
+            "description": ""
+        },
+        {
+            "id": "hybrid-4",
+            "name": "Hybrid 4",
+            "description": ""
+        }
     ],
     "smallForms": [
-        "Small Binary",
-        "Small Ternary"
+        {
+            "id": "small-binary",
+            "name": "Small Binary",
+            "description": ""
+        },
+        {
+            "id": "small-ternary",
+            "name": "Small Ternary",
+            "description": ""
+        }
     ],
     "sixteenBarForms": [
-        "Sixteen-bar Sentence",
-        "Sixteen-bar Period (Hybrid 1)",
-        "Sixteen-bar Period (Sentence)",
-        "Sixteen-bar Period (Hybrid 3)"
+        {
+            "id": "sixteen-bar-sentence",
+            "name": "Sixteen-bar Sentence",
+            "description": ""
+        },
+        {
+            "id": "sixteen-bar-period-hybrid-1",
+            "name": "Sixteen-bar Period (Hybrid 1)",
+            "description": ""
+        },
+        {
+            "id": "sixteen-bar-period-sentence",
+            "name": "Sixteen-bar Period (Sentence)",
+            "description": ""
+        },
+        {
+            "id": "sixteen-bar-period-hybrid-3",
+            "name": "Sixteen-bar Period (Hybrid 3)",
+            "description": ""
+        }
     ]
 }
