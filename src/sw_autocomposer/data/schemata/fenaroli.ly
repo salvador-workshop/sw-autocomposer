@@ -38,30 +38,30 @@ figuredBassFenaroli = \figuremode {
 
 % ----------------------------------------
 
-\score {
-  \new PianoStaff
-  <<
-    \new Staff = "upper" {
-      \omit Staff.TimeSignature
-      \clef treble
-      \key c \major
+% \score {
+%   \new PianoStaff
+%   <<
+%     \new Staff = "upper" {
+%       \omit Staff.TimeSignature
+%       \clef treble
+%       \key c \major
 
-      \upperFenaroli
-    }
-    \new Staff = "bassline" {
-      \omit Staff.TimeSignature
-      \clef bass
-      \key c \major
+%       \upperFenaroli
+%     }
+%     \new Staff = "bassline" {
+%       \omit Staff.TimeSignature
+%       \clef bass
+%       \key c \major
 
-      \basslineFenaroli
-    }
-    \new FiguredBass {
-      \figuredBassFenaroli
-    }
-  >>
-  \layout {
-    ragged-right = ##f
-    ragged-last = ##f
-  }
-  \midi { }
-}
+%       \basslineFenaroli
+%     }
+%     \new FiguredBass {
+%       \figuredBassFenaroli
+%     }
+%   >>
+%   \layout {
+%     ragged-right = ##f
+%     ragged-last = ##f
+%   }
+%   \midi { }
+% }

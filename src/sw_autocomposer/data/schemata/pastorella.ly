@@ -38,30 +38,30 @@ figuredBassPastorella = \figuremode {
 
 % ----------------------------------------
 
-\score {
-  \new PianoStaff
-  <<
-    \new Staff = "upper" {
-      \omit Staff.TimeSignature
-      \clef treble
-      \key c \major
+% \score {
+%   \new PianoStaff
+%   <<
+%     \new Staff = "upper" {
+%       \omit Staff.TimeSignature
+%       \clef treble
+%       \key c \major
 
-      \upperPastorella
-    }
-    \new Staff = "bassline" {
-      \omit Staff.TimeSignature
-      \clef bass
-      \key c \major
+%       \upperPastorella
+%     }
+%     \new Staff = "bassline" {
+%       \omit Staff.TimeSignature
+%       \clef bass
+%       \key c \major
 
-      \basslinePastorella
-    }
-    \new FiguredBass {
-      \figuredBassPastorella
-    }
-  >>
-  \layout {
-    ragged-right = ##f
-    ragged-last = ##f
-  }
-  \midi { }
-}
+%       \basslinePastorella
+%     }
+%     \new FiguredBass {
+%       \figuredBassPastorella
+%     }
+%   >>
+%   \layout {
+%     ragged-right = ##f
+%     ragged-last = ##f
+%   }
+%   \midi { }
+% }

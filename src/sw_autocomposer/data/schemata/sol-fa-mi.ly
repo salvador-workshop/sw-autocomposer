@@ -38,30 +38,30 @@ figuredBassSolFaMi = \figuremode {
 
 % ----------------------------------------
 
-\score {
-  \new PianoStaff
-  <<
-    \new Staff = "upper" {
-      \omit Staff.TimeSignature
-      \clef treble
-      \key c \major
+% \score {
+%   \new PianoStaff
+%   <<
+%     \new Staff = "upper" {
+%       \omit Staff.TimeSignature
+%       \clef treble
+%       \key c \major
 
-      \upperSolFaMi
-    }
-    \new Staff = "bassline" {
-      \omit Staff.TimeSignature
-      \clef bass
-      \key c \major
+%       \upperSolFaMi
+%     }
+%     \new Staff = "bassline" {
+%       \omit Staff.TimeSignature
+%       \clef bass
+%       \key c \major
 
-      \basslineSolFaMi
-    }
-    \new FiguredBass {
-      \figuredBassSolFaMi
-    }
-  >>
-  \layout {
-    ragged-right = ##f
-    ragged-last = ##f
-  }
-  \midi { }
-}
+%       \basslineSolFaMi
+%     }
+%     \new FiguredBass {
+%       \figuredBassSolFaMi
+%     }
+%   >>
+%   \layout {
+%     ragged-right = ##f
+%     ragged-last = ##f
+%   }
+%   \midi { }
+% }

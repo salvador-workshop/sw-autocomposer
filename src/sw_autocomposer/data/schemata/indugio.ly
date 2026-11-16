@@ -38,30 +38,30 @@ figuredBassIndugio = \figuremode {
 
 % ----------------------------------------
 
-\score {
-  \new PianoStaff
-  <<
-    \new Staff = "upper" {
-      \omit Staff.TimeSignature
-      \clef treble
-      \key c \major
+% \score {
+%   \new PianoStaff
+%   <<
+%     \new Staff = "upper" {
+%       \omit Staff.TimeSignature
+%       \clef treble
+%       \key c \major
 
-      \upperIndugio
-    }
-    \new Staff = "bassline" {
-      \omit Staff.TimeSignature
-      \clef bass
-      \key c \major
+%       \upperIndugio
+%     }
+%     \new Staff = "bassline" {
+%       \omit Staff.TimeSignature
+%       \clef bass
+%       \key c \major
 
-      \basslineIndugio
-    }
-    \new FiguredBass {
-      \figuredBassIndugio
-    }
-  >>
-  \layout {
-    ragged-right = ##f
-    ragged-last = ##f
-  }
-  \midi { }
-}
+%       \basslineIndugio
+%     }
+%     \new FiguredBass {
+%       \figuredBassIndugio
+%     }
+%   >>
+%   \layout {
+%     ragged-right = ##f
+%     ragged-last = ##f
+%   }
+%   \midi { }
+% }

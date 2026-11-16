@@ -38,30 +38,30 @@ figuredBassPassoIndietro = \figuremode {
 
 % ----------------------------------------
 
-\score {
-  \new PianoStaff
-  <<
-    \new Staff = "upper" {
-      \omit Staff.TimeSignature
-      \clef treble
-      \key c \major
+% \score {
+%   \new PianoStaff
+%   <<
+%     \new Staff = "upper" {
+%       \omit Staff.TimeSignature
+%       \clef treble
+%       \key c \major
 
-      \upperPassoIndietro
-    }
-    \new Staff = "bassline" {
-      \omit Staff.TimeSignature
-      \clef bass
-      \key c \major
+%       \upperPassoIndietro
+%     }
+%     \new Staff = "bassline" {
+%       \omit Staff.TimeSignature
+%       \clef bass
+%       \key c \major
 
-      \basslinePassoIndietro
-    }
-    \new FiguredBass {
-      \figuredBassPassoIndietro
-    }
-  >>
-  \layout {
-    ragged-right = ##f
-    ragged-last = ##f
-  }
-  \midi { }
-}
+%       \basslinePassoIndietro
+%     }
+%     \new FiguredBass {
+%       \figuredBassPassoIndietro
+%     }
+%   >>
+%   \layout {
+%     ragged-right = ##f
+%     ragged-last = ##f
+%   }
+%   \midi { }
+% }
