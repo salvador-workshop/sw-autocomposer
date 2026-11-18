@@ -6,18 +6,18 @@ melodyPassoIndietro = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  c4 b
 }
 
 innerPassoIndietro = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> <e g>
+  <e g>4 <f g>
 }
 
 upperPassoIndietro = {
-  \time 4/4
+  \time 2/4
 
   <<
     \new Voice = "melodyPassoIndietro" \melodyPassoIndietro
@@ -26,14 +26,14 @@ upperPassoIndietro = {
 }
 
 basslinePassoIndietro = \relative c {
-  \time 4/4
+  \time 2/4
   \override Stem.stencil = ##f
 
-  c4 d b c
+  c4^"IV" d^"I"
 }
 
 figuredBassPassoIndietro = \figuremode {
-  <5 3>4 <4 3> <6 5> <5 3>
+  <5 3>4 <4 3>
 }
 
 % ----------------------------------------

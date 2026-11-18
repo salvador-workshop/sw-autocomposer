@@ -6,18 +6,18 @@ melodyDoReMi = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  c4 b f'
 }
 
 innerDoReMi = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> <e g>
+  <e g>4 <f g> <f g>
 }
 
 upperDoReMi = {
-  \time 4/4
+  \time 3/4
 
   <<
     \new Voice = "melodyDoReMi" \melodyDoReMi
@@ -26,14 +26,14 @@ upperDoReMi = {
 }
 
 basslineDoReMi = \relative c {
-  \time 4/4
+  \time 3/4
   \override Stem.stencil = ##f
 
-  c4 d b c
+  c4^"I" d^"V" b^"I"
 }
 
 figuredBassDoReMi = \figuremode {
-  <5 3>4 <4 3> <6 5> <5 3>
+  <5 3>4 <4 3> <6 5>
 }
 
 % ----------------------------------------

@@ -1,4 +1,5 @@
 \version "2.25.13"
+\language "english" 
 
 \include "../data/schemata/meyer.ly"
 \include "../data/schemata/prinner.ly"

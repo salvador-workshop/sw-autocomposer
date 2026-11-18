@@ -29,7 +29,7 @@ basslineJupiterAlt = \relative c {
   \time 4/4
   \override Stem.stencil = ##f
 
-  c4 d b c
+  c4^"I" d^"V" b^"V" c^"I"
 }
 
 figuredBassJupiterAlt = \figuremode {

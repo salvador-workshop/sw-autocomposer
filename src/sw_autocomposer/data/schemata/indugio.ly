@@ -6,18 +6,18 @@ melodyIndugio = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  c4^"Brief passage can be inserted between first two stages." b f' e e
 }
 
 innerIndugio = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> <e g>
+  <e g>4 <f g> <f g> <e g> <e g>
 }
 
 upperIndugio = {
-  \time 4/4
+  \time 5/4
 
   <<
     \new Voice = "melodyIndugio" \melodyIndugio
@@ -26,14 +26,14 @@ upperIndugio = {
 }
 
 basslineIndugio = \relative c {
-  \time 4/4
+  \time 5/4
   \override Stem.stencil = ##f
 
-  c4 d b c
+  c4^"II" d^"II" b^"II" c^"V/V" c^"V"
 }
 
 figuredBassIndugio = \figuremode {
-  <5 3>4 <4 3> <6 5> <5 3>
+  <5 3>4 <4 3> <6 5> <5 3> <5 3>
 }
 
 % ----------------------------------------

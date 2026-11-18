@@ -1,4 +1,5 @@
 \version "2.25.13"
+\language "english" 
 
 % Opening Schemata
 \include "../data/schemata/meyer.ly"

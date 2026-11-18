@@ -6,18 +6,18 @@ melodyPrinnerAlt = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  c4 b f' s e e
 }
 
 innerPrinnerAlt = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> <e g>
+  <e g>4 <f g> <f g> b <e g> <e g>
 }
 
 upperPrinnerAlt = {
-  \time 4/4
+  \time 6/4
 
   <<
     \new Voice = "melodyPrinnerAlt" \melodyPrinnerAlt
@@ -26,14 +26,14 @@ upperPrinnerAlt = {
 }
 
 basslinePrinnerAlt = \relative c {
-  \time 4/4
+  \time 6/4
   \override Stem.stencil = ##f
 
-  c4 d b c
+  c4^"VI" d^"I" b^"VII" s c^"V" c^"I" 
 }
 
 figuredBassPrinnerAlt = \figuremode {
-  <5 3>4 <4 3> <6 5> <5 3>
+  <5 3>4 <4 3> <6 5> s <5 3> <5 3>
 }
 
 % ----------------------------------------

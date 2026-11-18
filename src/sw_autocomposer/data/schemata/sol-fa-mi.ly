@@ -29,7 +29,7 @@ basslineSolFaMi = \relative c {
   \time 4/4
   \override Stem.stencil = ##f
 
-  c4 d b c
+  c4^"I" d^"II" b^"V" c^"I"
 }
 
 figuredBassSolFaMi = \figuremode {
