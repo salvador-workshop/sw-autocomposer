@@ -2,29 +2,29 @@
 \language "english" 
 
 % Opening Schemata
-\include "../data/schemata/meyer.ly"
-\include "../data/schemata/jupiter.ly"
-\include "../data/schemata/jupiter-alt.ly"
-\include "../data/schemata/aprile.ly"
-\include "../data/schemata/pastorella.ly"
-\include "../data/schemata/do-re-mi.ly"
-\include "../data/schemata/sol-fa-mi.ly"
-\include "../data/schemata/sol-fa-mi-alt.ly"
-\include "../data/schemata/romanesca.ly"
+\include "../data/schemata/opening/meyer.ly"
+\include "../data/schemata/opening/jupiter.ly"
+\include "../data/schemata/opening/jupiter-alt.ly"
+\include "../data/schemata/opening/aprile.ly"
+\include "../data/schemata/opening/pastorella.ly"
+\include "../data/schemata/opening/do-re-mi.ly"
+\include "../data/schemata/opening/sol-fa-mi.ly"
+\include "../data/schemata/opening/sol-fa-mi-alt.ly"
+\include "../data/schemata/opening/romanesca.ly"
 
 % Continuing Schemata
-\include "../data/schemata/prinner.ly"
-\include "../data/schemata/prinner-alt.ly"
-\include "../data/schemata/mod-prinner.ly"
-\include "../data/schemata/mod-prinner-alt.ly"
-\include "../data/schemata/passo-indietro.ly"
-\include "../data/schemata/mod-passo-indietro.ly"
+\include "../data/schemata/continuing/prinner.ly"
+\include "../data/schemata/continuing/prinner-alt.ly"
+\include "../data/schemata/continuing/mod-prinner.ly"
+\include "../data/schemata/continuing/mod-prinner-alt.ly"
+\include "../data/schemata/continuing/passo-indietro.ly"
+\include "../data/schemata/continuing/mod-passo-indietro.ly"
 
 % Contrasting Schemata
-\include "../data/schemata/quiescenza.ly"
-\include "../data/schemata/ponte.ly"
-\include "../data/schemata/fenaroli.ly"
-\include "../data/schemata/indugio.ly"
+\include "../data/schemata/contrasting/quiescenza.ly"
+\include "../data/schemata/contrasting/ponte.ly"
+\include "../data/schemata/contrasting/fenaroli.ly"
+\include "../data/schemata/contrasting/indugio.ly"
 
 %------------------------------------------------------------
 
