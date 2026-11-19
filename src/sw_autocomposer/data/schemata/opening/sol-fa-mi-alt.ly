@@ -6,14 +6,14 @@ melodySolFaMiAlt = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  g'4 f f e
 }
 
 innerSolFaMiAlt = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> <e g>
+  <e g>4 <f b> <f g> <e g>
 }
 
 upperSolFaMiAlt = {
@@ -33,7 +33,7 @@ basslineSolFaMiAlt = \relative c {
 }
 
 figuredBassSolFaMiAlt = \figuremode {
-  <5 3>4 <4 3> <6 5> <5 3>
+  <5 3>4 <6 3> <6 5> <5 3>
 }
 
 % ----------------------------------------

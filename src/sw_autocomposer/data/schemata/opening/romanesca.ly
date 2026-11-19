@@ -6,14 +6,14 @@ melodyRomanesca = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  c4 g' c, c
 }
 
 innerRomanesca = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> <e g>
+  <e g>4 <d g> <c e> <g c>
 }
 
 upperRomanesca = {
@@ -29,11 +29,11 @@ basslineRomanesca = \relative c {
   \time 4/4
   \override Stem.stencil = ##f
 
-  c4^"I" d^"V" b^"VI" c^"I"
+  c4^"I" b^"V" a^"VI" e^"I"
 }
 
 figuredBassRomanesca = \figuremode {
-  <5 3>4 <4 3> <6 5> <5 3>
+  <5 3>4 <6 3> <5 3> <6 3>
 }
 
 % ----------------------------------------

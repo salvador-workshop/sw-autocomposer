@@ -6,14 +6,14 @@ melodyJupiterAlt = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  c4 d f e
 }
 
 innerJupiterAlt = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> <e g>
+  <e g>4 <b d f> <b d f> <e g>
 }
 
 upperJupiterAlt = {
@@ -29,11 +29,11 @@ basslineJupiterAlt = \relative c {
   \time 4/4
   \override Stem.stencil = ##f
 
-  c4^"I" d^"V" b^"V" c^"I"
+  c4^"I" g^"V" g^"V" c^"I"
 }
 
 figuredBassJupiterAlt = \figuremode {
-  <5 3>4 <4 3> <6 5> <5 3>
+  <5 3>4 <7> <7> <5 3>
 }
 
 % ----------------------------------------

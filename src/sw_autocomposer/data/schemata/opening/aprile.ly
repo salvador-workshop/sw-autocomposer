@@ -6,7 +6,7 @@ melodyAprile = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  c4 b d c
 }
 
 innerAprile = \relative c' {
