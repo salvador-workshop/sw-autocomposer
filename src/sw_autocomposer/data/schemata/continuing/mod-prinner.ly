@@ -6,14 +6,14 @@ melodyModPrinner = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' s e
+  e4 d c s b
 }
 
 innerModPrinner = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> fs <e g>
+  <e g>4 <d g> <c g'(> fs) <d b>
 }
 
 upperModPrinner = {
@@ -29,11 +29,11 @@ basslineModPrinner = \relative c {
   \time 5/4
   \override Stem.stencil = ##f
 
-  c4^"I" d^"V" b^"VII/V" s c^"V"
+  c4^"I" b^"V" a^"VII/V" s g^"V"
 }
 
 figuredBassModPrinner = \figuremode {
-  <5 3>4 <4 3> <6 5> s <5 3>
+  <5 3>4 <6 3> <7 3> <6+ 3> <5 3>
 }
 
 % ----------------------------------------

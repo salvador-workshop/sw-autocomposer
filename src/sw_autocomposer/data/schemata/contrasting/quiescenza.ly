@@ -6,14 +6,14 @@ melodyQuiescenza = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  bf4 a b c
 }
 
 innerQuiescenza = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> <e g>
+  e4 f d <e g>
 }
 
 upperQuiescenza = {
@@ -29,11 +29,11 @@ basslineQuiescenza = \relative c {
   \time 4/4
   \override Stem.stencil = ##f
 
-  c4^"V/IV" d^"IV" b^"V" c^"I"
+  c4^"V/IV" c^"IV" c^"V" c^"I"
 }
 
 figuredBassQuiescenza = \figuremode {
-  <5 3>4 <4 3> <6 5> <5 3>
+  <7- 3>4 <6 4> <7! 2> <5 3>
 }
 
 % ----------------------------------------

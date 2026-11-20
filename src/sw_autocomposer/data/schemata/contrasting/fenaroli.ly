@@ -6,14 +6,14 @@ melodyFenaroli = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f' e
+  f4 e b c
 }
 
 innerFenaroli = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g> <e g>
+  <f g>4 <e g> <f b> g
 }
 
 upperFenaroli = {
@@ -29,11 +29,11 @@ basslineFenaroli = \relative c {
   \time 4/4
   \override Stem.stencil = ##f
 
-  c4 d b c
+  b4^"V" c^"I" d^"VII" e^"I"
 }
 
 figuredBassFenaroli = \figuremode {
-  <5 3>4 <4 3> <6 5> <5 3>
+  <6 5>4 <5 3> <6 3> <6 3>
 }
 
 % ----------------------------------------

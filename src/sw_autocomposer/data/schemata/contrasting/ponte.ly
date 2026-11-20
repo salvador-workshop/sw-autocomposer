@@ -6,14 +6,14 @@ melodyPonte = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b f'
+  g4 b d^"etc."
 }
 
 innerPonte = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g> <f g>
+  <b d>4 <b d f> <b d f>
 }
 
 upperPonte = {
@@ -29,11 +29,11 @@ basslinePonte = \relative c {
   \time 3/4
   \override Stem.stencil = ##f
 
-  c4^"V" d^"V" b^"V"
+  g4^"V" g^"V" g^"V"
 }
 
 figuredBassPonte = \figuremode {
-  <5 3>4 <4 3> <6 5>
+  <5 3>4 <7 5 3> <7 5 3>
 }
 
 % ----------------------------------------

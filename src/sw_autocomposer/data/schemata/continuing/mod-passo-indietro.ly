@@ -6,14 +6,14 @@ melodyModPassoIndietro = \relative c'' {
   \voiceOne
   \override Stem.stencil = ##f
 
-  c4 b
+  e4 d
 }
 
 innerModPassoIndietro = \relative c' {
   \voiceTwo
   \override Stem.stencil = ##f
 
-  <e g>4 <f g>
+  <e g>4 <d g>
 }
 
 upperModPassoIndietro = {
@@ -29,11 +29,11 @@ basslineModPassoIndietro = \relative c {
   \time 2/4
   \override Stem.stencil = ##f
 
-  c4^"I" d^"V"
+  c4^"I" b^"V"
 }
 
 figuredBassModPassoIndietro = \figuremode {
-  <5 3>4 <4 3>
+  <5 3>4 <6 3>
 }
 
 % ----------------------------------------
