@@ -1,47 +1,51 @@
 {
     "version": "0.1.2",
+    "eightBarFormsIntro": {
+        "sentenceDescription": "Sentences have two subphrases: presentation + continuation. The presentation consists of the basic idea and repetition. Continuation has the same length as presentation. In addition, it typically has 4 key traits: fragmentation, more rhythmic activity, sequences, faster harmonic rhythm.",
+        "periodDescription": "Two subphrases (antecedent + consequent), each consisting of a basic idea and contrasting idea. The antecedent ends in a weaker cadence, while the consequent ends in a stronger cadence. In other words, the antecedent asks, and the consequent answers."
+    },
     "eightBarForms": [
         {
             "id": "sentence",
             "name": "Sentence",
-            "description": ""
+            "description": "Presentation + continuation. The presentation consists of the basic idea and repetition. Continuation has the same length as presentation."
         },
         {
             "id": "period",
             "name": "Period",
-            "description": ""
+            "description": "Two subphrases (antecedent + consequent), each consisting of a basic idea and contrasting idea."
         },
         {
             "id": "hybrid-1",
             "name": "Hybrid 1",
-            "description": ""
+            "description": "First half is a period subphrase, finished by a sentence subphrase."
         },
         {
             "id": "hybrid-2",
             "name": "Hybrid 2",
-            "description": ""
+            "description": "First half is a period subphrase, finished by something like a sentence subphrase (less about fragmentation, more about cadential setup)"
         },
         {
             "id": "hybrid-3",
             "name": "Hybrid 3",
-            "description": ""
+            "description": "The first half is a compound basic idea. The compound basic idea is a hybrid subphrase with a period-like structure (BI + CI) and sentence-like harmony (no cadence). This is then finished like a sentence."
         },
         {
             "id": "hybrid-4",
             "name": "Hybrid 4",
-            "description": ""
+            "description": "The first half is a hybrid subphrase with a period-like structure (BI + CI) and sentence-like harmony (no cadence). This is then finished like a period."
         }
     ],
     "smallForms": [
         {
             "id": "small-binary",
             "name": "Small Binary",
-            "description": ""
+            "description": "First and second parts are usually an 8-measure theme. Second part should not have a recapitulation, and can be contrasting or similar to the first part."
         },
         {
             "id": "small-ternary",
             "name": "Small Ternary",
-            "description": ""
+            "description": "First part contains an exposition, usually an 8-measure theme. Second part starts with a contrasting middle (variable length), and ends with a recapitulation using material from the exposition (4-8 measures)."
         }
     ],
     "sixteenBarForms": [
