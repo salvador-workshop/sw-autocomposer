@@ -62,7 +62,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -93,7 +93,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -124,7 +124,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -155,7 +155,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -186,7 +186,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -217,7 +217,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -248,7 +248,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -279,7 +279,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -310,7 +310,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 %------------------------------------------------------------
@@ -343,7 +343,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -372,7 +372,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -401,7 +401,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -430,7 +430,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -459,7 +459,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -488,7 +488,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 %------------------------------------------------------------
@@ -521,7 +521,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -550,7 +550,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -579,7 +579,7 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
 
 \score {
@@ -608,5 +608,5 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }

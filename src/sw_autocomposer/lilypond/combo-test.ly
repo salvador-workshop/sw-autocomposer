@@ -34,5 +34,5 @@
     ragged-right = ##f
     ragged-last = ##f
   }
-  \midi { }
+  % \midi { }
 }
