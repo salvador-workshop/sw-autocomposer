@@ -1,6 +1,6 @@
 [project]
 name = "sw-autocomposer"
-version = "0.1.5alpha1"
+version = "0.1.5alpha2"
 description = "Tools for music composition"
 authors = [{ name = "RJ Salvador", email = "salvador.workshop@gmail.com" }]
 readme = "README.md"

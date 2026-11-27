@@ -1,0 +1,6 @@
+# LilyPond generated files
+*.midi
+*.pdf
+
+# Internal generated scripts
+*.internal.ly

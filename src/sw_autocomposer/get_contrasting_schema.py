@@ -11,11 +11,9 @@ def get_contrasting_schema():
     parser = argparse.ArgumentParser(description=script_desc)
     args = parser.parse_args()
 
-    schemata_data_filepath = os.path.join(
-        cfg_data["data_dir"], cfg_data["galant_schemata_filename"]
-    )
+    galant_schemata_filepath = cfg_data["galant_schemata_filepath"]
 
-    with open(schemata_data_filepath) as f:
+    with open(galant_schemata_filepath) as f:
         schemata_data = json.load(f)
 
     random_contrasting_schema = random.choice(schemata_data["contrastingSchemata"])

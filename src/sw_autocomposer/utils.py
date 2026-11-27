@@ -13,8 +13,14 @@ def get_all_available_schemata(data_filepath):
         data_json = json.load(file)
 
         opening_schemata = data_json["openingSchemata"]
+        for schema in opening_schemata:
+            schemata_list.append(schema)
         continuing_schemata = data_json["continuingSchemata"]
+        for schema in continuing_schemata:
+            schemata_list.append(schema)
         contrasting_schemata = data_json["contrastingSchemata"]
+        for schema in contrasting_schemata:
+            schemata_list.append(schema)
 
     return schemata_list
 
@@ -26,8 +32,14 @@ def get_all_available_forms(data_filepath):
         data_json = json.load(file)
 
         eight_bar_forms = data_json["eightBarForms"]
+        for form in eight_bar_forms:
+            forms_list.append(form)
         small_forms = data_json["smallForms"]
+        for form in small_forms:
+            forms_list.append(form)
         sixteen_bar_forms = data_json["sixteenBarForms"]
+        for form in sixteen_bar_forms:
+            forms_list.append(form)
 
     return forms_list
 
@@ -57,13 +69,21 @@ def get_cfg_data():
         "repo_root_dir": repo_root_dir,
         "output_dir": output_dir,
         "src_dir": src_dir,
+        "data_dir": os.path.join(src_dir, "sw_autocomposer/data"),
+        "ly_templates_dir": os.path.join(src_dir, "sw_autocomposer/lilypond_templates"),
         "cfg_filename": "autocomposer.config.json",
         "comp_form_filename": "composition_form.json",
         "galant_schemata_filename": "galant_schemata.json",
-    }
+    } 
 
     cfg_data["cfg_filepath"] = os.path.join(repo_root_dir, cfg_data["cfg_filename"])
-    cfg_data["data_dir"] = os.path.join(src_dir, "sw_autocomposer/data")
+    cfg_data["comp_form_filepath"] = os.path.join(
+        cfg_data["data_dir"], cfg_data["comp_form_filename"]
+    )
+    cfg_data["galant_schemata_filepath"] = os.path.join(
+        cfg_data["data_dir"], cfg_data["galant_schemata_filename"]
+    )
+
 
     with open(f"{cfg_data['cfg_filepath']}", "r") as file:
         cfg_json = json.load(file)
