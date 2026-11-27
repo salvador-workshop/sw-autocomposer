@@ -6,6 +6,52 @@ output_dir = os.path.join(repo_root_dir, "output")
 src_dir = os.path.join(repo_root_dir, "src")
 
 
+def get_all_available_schemata(data_filepath):
+    schemata_list = []
+
+    with open(data_filepath, "r") as file:
+        data_json = json.load(file)
+
+        opening_schemata = data_json["openingSchemata"]
+        continuing_schemata = data_json["continuingSchemata"]
+        contrasting_schemata = data_json["contrastingSchemata"]
+
+    return schemata_list
+
+
+def get_all_available_forms(data_filepath):
+    forms_list = []
+
+    with open(data_filepath, "r") as file:
+        data_json = json.load(file)
+
+        eight_bar_forms = data_json["eightBarForms"]
+        small_forms = data_json["smallForms"]
+        sixteen_bar_forms = data_json["sixteenBarForms"]
+
+    return forms_list
+
+
+def get_all_available_transpose_targets():
+    transpose_target_list = [
+        "c",
+        "g",
+        "d",
+        "a",
+        "e",
+        "b",
+        "fs",
+        "gf",
+        "df",
+        "af",
+        "ef",
+        "bf",
+        "f",
+    ]
+
+    return transpose_target_list
+
+
 def get_cfg_data():
     cfg_data = {
         "repo_root_dir": repo_root_dir,
@@ -27,6 +73,8 @@ def get_cfg_data():
         cfg_data["output_dir_pdf"] = os.path.join(
             repo_root_dir, cfg_json["paths"]["outputDirectoryPdf"]
         )
+
+    cfg_data["transpose_targets"] = get_all_available_transpose_targets()
 
     return cfg_data
 
