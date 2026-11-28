@@ -1,5 +1,11 @@
 {
     "version": "0.1.2",
+    "timeSignatures": {
+        "4/4": 2,
+        "3/4": 2,
+        "6/8": 1,
+        "9/8": 1
+    },
     "eightBarFormsIntro": {
         "sentenceDescription": "Sentences have two subphrases: presentation + continuation. The presentation consists of the basic idea and repetition. Continuation has the same length as presentation. In addition, it typically has 4 key traits: fragmentation, more rhythmic activity, sequences, faster harmonic rhythm.",
         "periodDescription": "Two subphrases (antecedent + consequent), each consisting of a basic idea and contrasting idea. The antecedent ends in a weaker cadence, while the consequent ends in a stronger cadence. In other words, the antecedent asks, and the consequent answers."

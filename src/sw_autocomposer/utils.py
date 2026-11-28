@@ -8,47 +8,80 @@ src_dir = os.path.join(repo_root_dir, "src")
 package_dir = os.path.join(src_dir, "sw_autocomposer")
 
 data_dir = os.path.join(package_dir, "data")
+forms_img_dir = os.path.join(data_dir, "img/form")
 lilypond_dir = os.path.join(package_dir, "lilypond")
 lilypond_templates_dir = os.path.join(package_dir, "lilypond_templates")
 templating_dir = os.path.join(package_dir, "templating")
 
 
 def get_all_available_schemata(data_filepath):
-    schemata_list = []
+    opening_schemata_ids = []
+    continuing_schemata_ids = []
+    contrasting_schemata_ids = []
 
     with open(data_filepath, "r") as file:
         data_json = json.load(file)
 
         opening_schemata = data_json["openingSchemata"]
         for schema in opening_schemata:
-            schemata_list.append(schema)
+            opening_schemata_ids.append(schema["id"])
+
         continuing_schemata = data_json["continuingSchemata"]
         for schema in continuing_schemata:
-            schemata_list.append(schema)
+            continuing_schemata_ids.append(schema["id"])
+
         contrasting_schemata = data_json["contrastingSchemata"]
         for schema in contrasting_schemata:
-            schemata_list.append(schema)
+            contrasting_schemata_ids.append(schema["id"])
 
-    return schemata_list
+    return {
+        "opening": opening_schemata_ids,
+        "continuing": continuing_schemata_ids,
+        "contrasting": contrasting_schemata_ids,
+    }
 
 
 def get_all_available_forms(data_filepath):
-    forms_list = []
+    eight_bar_form_ids = []
+    small_form_ids = []
+    sixteen_bar_form_ids = []
 
     with open(data_filepath, "r") as file:
         data_json = json.load(file)
 
         eight_bar_forms = data_json["eightBarForms"]
         for form in eight_bar_forms:
-            forms_list.append(form)
+            eight_bar_form_ids.append(form["id"])
+
         small_forms = data_json["smallForms"]
         for form in small_forms:
-            forms_list.append(form)
+            small_form_ids.append(form["id"])
+
         sixteen_bar_forms = data_json["sixteenBarForms"]
         for form in sixteen_bar_forms:
-            forms_list.append(form)
+            sixteen_bar_form_ids.append(form["id"])
 
-    return forms_list
+    return {
+        "eight_bar": eight_bar_form_ids,
+        "small": small_form_ids,
+        "sixteen_bar": sixteen_bar_form_ids,
+    }
+
+
+def get_all_available_time_signatures(data_filepath):
+    """Gets all available time signatures, including repetitions specified in data file."""
+
+    all_time_sigs = []
+    with open(data_filepath, "r") as file:
+        data_json = json.load(file)
+        time_sigs_with_weights = data_json["timeSignatures"]
+        for time_sig, weight_reps in time_sigs_with_weights.items():
+            for i in range(weight_reps):
+                # print(i)
+                all_time_sigs.append(time_sig)
+            # print(f"{time_sig}: {weight_reps}")
+
+    return all_time_sigs
 
 
 def get_cfg_data():
@@ -58,6 +91,7 @@ def get_cfg_data():
         "src_dir": src_dir,
         "package_dir": package_dir,
         "data_dir": data_dir,
+        "forms_img_dir": forms_img_dir,
         "lilypond_dir": lilypond_dir,
         "lilypond_templates_dir": lilypond_templates_dir,
         "templating_dir": templating_dir,
@@ -82,6 +116,14 @@ def get_cfg_data():
         cfg_data["output_dir_pdf"] = os.path.join(
             repo_root_dir, cfg_json["paths"]["outputDirectoryPdf"]
         )
+
+    cfg_data["schemata"] = get_all_available_schemata(
+        cfg_data["galant_schemata_filepath"]
+    )
+    cfg_data["forms"] = get_all_available_forms(cfg_data["comp_form_filepath"])
+    cfg_data["time_signatures"] = get_all_available_time_signatures(
+        cfg_data["comp_form_filepath"]
+    )
 
     return cfg_data
 

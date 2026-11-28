@@ -1,20 +1,9 @@
 import argparse, os, random, json
 
 from ..utils import get_cfg_data
-from .template_utils import template_strings, transpose_target_list
+from .template_utils import template_paths, template_strings, transpose_target_list
 
 cfg_data = get_cfg_data()
-template_paths = {
-    "all_schemata": os.path.join(
-        cfg_data["lilypond_templates_dir"], "all-schemata-template.ly"
-    ),
-    "all_schemata_random": os.path.join(
-        cfg_data["lilypond_templates_dir"], "all-schemata-template.ly"
-    ),
-    "random_schemata": os.path.join(
-        cfg_data["lilypond_templates_dir"], "all-schemata-template.ly"
-    ),
-}
 
 
 def write_lilypond_internal_file(filename_stub, content):
@@ -44,6 +33,34 @@ def write_all_schemata_random():
 
     converted_content = template_content.replace(template_target, random_transpose_expr)
     write_lilypond_internal_file("all-schemata-random", converted_content)
+
+    return 0
+
+
+def write_random_forms():
+    random_time_sig = random.choice(cfg_data["time_signatures"])
+
+    random_eight_bar_form_id = f"{random.choice(cfg_data["forms"]["eight_bar"])}.png"
+    random_eight_bar_form = f"../data/img/form/{random_eight_bar_form_id}"
+
+    random_small_form_id = f"{random.choice(cfg_data["forms"]["small"])}.png"
+    random_small_form = f"../data/img/form/{random_small_form_id}"
+
+    print(random_time_sig, random_eight_bar_form, random_small_form)
+
+    with open(template_paths["random_forms"], "r") as template_file:
+        template_content = template_file.read()
+
+    converted_content = template_content.replace(
+        template_strings["form_time_signature"], random_time_sig
+    )
+    converted_content = converted_content.replace(
+        template_strings["form_img_path_eight_bar"], random_eight_bar_form
+    )
+    converted_content = converted_content.replace(
+        template_strings["form_img_path_small"], random_small_form
+    )
+    write_lilypond_internal_file("random-forms", converted_content)
 
     return 0
 
