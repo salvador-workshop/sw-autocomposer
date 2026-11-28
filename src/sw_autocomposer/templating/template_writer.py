@@ -21,7 +21,7 @@ def write_lilypond_internal_file(filename_stub, content):
     full_filename = f"{filename_stub}.internal.ly"
     full_filepath = os.path.join(cfg_data["lilypond_dir"], full_filename)
 
-    with open(full_filepath, "a") as outfile:
+    with open(full_filepath, "w") as outfile:
         outfile.write(content)
 
     return 0
