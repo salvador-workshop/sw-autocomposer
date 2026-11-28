@@ -5,3 +5,19 @@ template_strings = {
     "schema_label": "SchemaLabel",
     "form_img_path": "FormImgPath",
 }
+
+transpose_target_list = [
+    "c",
+    "g,",
+    "d",
+    "a,",
+    "e",
+    "b,",
+    "fs",
+    "gf",
+    "df",
+    "af,",
+    "ef",
+    "bf,",
+    "f",
+]

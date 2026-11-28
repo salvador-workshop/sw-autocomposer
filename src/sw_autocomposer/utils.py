@@ -1,9 +1,16 @@
 import os, json
 
 file_dir = os.path.dirname(os.path.realpath(__file__))
+
 repo_root_dir = os.path.join(file_dir, "../../")
 output_dir = os.path.join(repo_root_dir, "output")
 src_dir = os.path.join(repo_root_dir, "src")
+package_dir = os.path.join(src_dir, "sw_autocomposer")
+
+data_dir = os.path.join(package_dir, "data")
+lilypond_dir = os.path.join(package_dir, "lilypond")
+lilypond_templates_dir = os.path.join(package_dir, "lilypond_templates")
+templating_dir = os.path.join(package_dir, "templating")
 
 
 def get_all_available_schemata(data_filepath):
@@ -44,37 +51,20 @@ def get_all_available_forms(data_filepath):
     return forms_list
 
 
-def get_all_available_transpose_targets():
-    transpose_target_list = [
-        "c",
-        "g",
-        "d",
-        "a",
-        "e",
-        "b",
-        "fs",
-        "gf",
-        "df",
-        "af",
-        "ef",
-        "bf",
-        "f",
-    ]
-
-    return transpose_target_list
-
-
 def get_cfg_data():
     cfg_data = {
         "repo_root_dir": repo_root_dir,
         "output_dir": output_dir,
         "src_dir": src_dir,
-        "data_dir": os.path.join(src_dir, "sw_autocomposer/data"),
-        "ly_templates_dir": os.path.join(src_dir, "sw_autocomposer/lilypond_templates"),
+        "package_dir": package_dir,
+        "data_dir": data_dir,
+        "lilypond_dir": lilypond_dir,
+        "lilypond_templates_dir": lilypond_templates_dir,
+        "templating_dir": templating_dir,
         "cfg_filename": "autocomposer.config.json",
         "comp_form_filename": "composition_form.json",
         "galant_schemata_filename": "galant_schemata.json",
-    } 
+    }
 
     cfg_data["cfg_filepath"] = os.path.join(repo_root_dir, cfg_data["cfg_filename"])
     cfg_data["comp_form_filepath"] = os.path.join(
@@ -84,7 +74,6 @@ def get_cfg_data():
         cfg_data["data_dir"], cfg_data["galant_schemata_filename"]
     )
 
-
     with open(f"{cfg_data['cfg_filepath']}", "r") as file:
         cfg_json = json.load(file)
         cfg_data["output_dir_ly"] = os.path.join(
@@ -93,8 +82,6 @@ def get_cfg_data():
         cfg_data["output_dir_pdf"] = os.path.join(
             repo_root_dir, cfg_json["paths"]["outputDirectoryPdf"]
         )
-
-    cfg_data["transpose_targets"] = get_all_available_transpose_targets()
 
     return cfg_data
 

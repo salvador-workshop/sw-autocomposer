@@ -1,6 +1,6 @@
 [project]
 name = "sw-autocomposer"
-version = "0.1.5alpha2"
+version = "0.1.5"
 description = "Tools for music composition"
 authors = [{ name = "RJ Salvador", email = "salvador.workshop@gmail.com" }]
 readme = "README.md"
@@ -15,6 +15,7 @@ get-combo-schema = "src.sw_autocomposer.get_combo_schema:get_combo_schema"
 get-comp-form-eight = "src.sw_autocomposer.get_comp_form_eight:get_comp_form_eight"
 get-comp-form-sixteen = "src.sw_autocomposer.get_comp_form_sixteen:get_comp_form_sixteen"
 get-comp-form-small = "src.sw_autocomposer.get_comp_form_small:get_comp_form_small"
+write-templates = "src.sw_autocomposer.write_templates:write_templates"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
